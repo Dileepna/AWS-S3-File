@@ -5,10 +5,10 @@ spring:
   cloud:
     aws:
       credentials:
-        access-key: GK12f12a1319f31d5c7a971762
-        secret-key: 5b312033485ff632a0a7e455632451aaf6af4807b87eaaaa1b8274cc5efab435
+        access-key: g123toujk728u92njkh23u18uolk
+        secret-key: j12h3gjh3jk1hlk23jljlkj23klnkln23knnmnnkjklkj3213213jlkjlkjl3
       s3:
-        endpoint: http://172.17.0.8:3900
+        endpoint: http://171.17.1.10:3900
         region: garage
         chunked-encoding-enabled: false
 s3:
