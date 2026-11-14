@@ -1,4 +1,4 @@
-name: Deploy to Kubernetes Cluster
+name: Deploy to GKE
 
 on:
   workflow_run:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      IMAGE: ghcr.io/dileepna/aws-s3-file
+      IMAGE: ghcr.io/dileepna/ms-aws-s3-file
       IMAGE_TAG: ${{ github.event.workflow_run.head_sha }}
 
     steps:
