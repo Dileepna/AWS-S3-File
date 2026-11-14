@@ -10,7 +10,7 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ghcr.io/dileepna/ms-aws-s3-file
+  IMAGE_NAME: ghcr.io/dileepna/aws-s3-file
 
 jobs:
   build-and-push:
