@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ms-aws-s3-file
+  name: aws-s3-file
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ms-aws-s3-file
+      app: aws-s3-file
   template:
     metadata:
       labels:
-        app: ms-aws-s3-file
+        app: aws-s3-file
     spec:
       imagePullSecrets:
         - name: ghcr-secret
       containers:
-        - name: ms-aws-s3-file
+        - name: aws-s3-file
           image: ghcr.io/dileepna/aws-s3-file:latest
           ports:
             - containerPort: 8080
@@ -23,10 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: ms-aws-s3-file
+  name: aws-s3-file
 spec:
   selector:
-    app: ms-aws-s3-file
+    app: aws-s3-file
   ports:
     - port: 80
       targetPort: 8080
