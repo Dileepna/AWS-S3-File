@@ -29,7 +29,7 @@ public class S3FileController {
     private final FileService fileService;
 
     @GetMapping("/welcomenote")
-    public ResponseEntity<String> getFilesMetaDataFropmS3() {
+    public ResponseEntity<String> welcomNote() {
     return new ResponseEntity<>("Welcome to AWS S3 storage application.", HttpStatus.OK);
     }
 
