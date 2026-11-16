@@ -28,6 +28,11 @@ public class S3FileController {
 
     private final FileService fileService;
 
+    @GetMapping("/welcomenote")
+    public ResponseEntity<String> getFilesMetaDataFropmS3() {
+    return new ResponseEntity<>("Welcome to AWS S3 storage application.", HttpStatus.OK);
+    }
+
     @PostMapping("/file")
     public ResponseEntity<?> uploadFile(@RequestParam MultipartFile file) throws IOException {
         fileService.uploadFileToS3(file.getOriginalFilename(), file.getInputStream());
